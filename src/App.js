@@ -18,14 +18,13 @@ function App() {
     axios
       .get(countryApiURL)
       .then((response) => {
-        setCountries(response.data)
-        console.log(response.data);
+        setCountries(response.data.sort((a, b) => a.name.common > b.name.common ? 1 : -1, 0))
         setFetching(false)
       })
       .catch(err => console.error(err))
   }, [])
 
-  return (
+    return (
     <div className="App">
       <Navbar />
 
