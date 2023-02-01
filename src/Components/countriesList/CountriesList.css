@@ -1,9 +1,11 @@
 .wheel-and-hamster {
     --dur: 1s;
     position: relative;
+    top: 15px;
+    left: 150px;
     width: 12em;
     height: 12em;
-    font-size: 14px;
+    font-size: 34px;
 }
 
 .wheel,
@@ -343,3 +345,4 @@
 .col-5 {
     max-height: 90vh;
 }
+

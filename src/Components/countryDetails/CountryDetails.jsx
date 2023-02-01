@@ -34,7 +34,6 @@ const CountryDetails = (props) => {
                                             <div>
                                                 <div>
                                                     <div>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -69,8 +68,11 @@ const CountryDetails = (props) => {
                                 <td>Borders</td>
                                 <td>
                                     {foundCountry.borders.map((borderCountry) => {
+                                        const countryBorder = countriesData.find((foundBorder) => {
+                                            return foundBorder.alpha3Code === borderCountry
+                                        })
                                         return (
-                                            <Link to={`/${borderCountry}`}><div>{borderCountry}</div></Link>
+                                            <Link to={`/${borderCountry}`}><div>{countryBorder.name.common}</div></Link>
                                         )
                                     })}
                                 </td>
